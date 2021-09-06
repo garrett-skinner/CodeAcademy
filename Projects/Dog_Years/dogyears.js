@@ -17,9 +17,9 @@ function dogYears (age) {
     if (age == 1) {
         return 10.5;
     } else {
-        if (age == 2){
+        if (age == 2) {
             return (10.5 + dogYears(age - 1));
-        } else{
+        } else { 
             return (4 + dogYears(age - 1));
         }
     }

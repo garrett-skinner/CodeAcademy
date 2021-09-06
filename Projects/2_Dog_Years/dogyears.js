@@ -25,12 +25,15 @@ function dogYears (age) {
     }
 }
 
+// Testing output.
 console.log(`1 human year is ${dogYears(1)} dog years.`);
 console.log(`2 human years is ${dogYears(2)} dog years.`);
 console.log(`5 human years is ${dogYears(5)} dog years.`);
 console.log(`10 human years is ${dogYears(10)} dog years.`);
 console.log(`15 human years is ${dogYears(15)} dog years.`);
+console.log(`24 human years is ${dogYears(24)} dog years.`);
 console.log(`25 human years is ${dogYears(25)} dog years.`);
+// Testing error case.
 try {
     dogYears(0);
 } catch (err) {

@@ -8,7 +8,7 @@ As a timeline, registration would look like this:
 | 11:00 am | Adult and registered late |
 | 12:30 pm | All youth |
 
-Hre's how our registration works.  There are adult runners (over 18 years of age) and youth runners (under 18 years of age). They can register early or late. Runner are assigned a race number and start time based on their age and registration. 
+Here's how our registration works.  There are adult runners (over 18 years of age) and youth runners (under 18 years of age). They can register early or late. Runner are assigned a race number and start time based on their age and registration. 
 
 Race number:
 - Early adults receive a race number at or above 1000.
@@ -20,4 +20,4 @@ Start time:
     - Late adults run at 11:00 am.
 - Youth registrants run at 12:30 pm (regardless of registration).
 
-But we didn't plan for runners that are exactly 18! We'll handle that at the end.
+But we didn't plan for runners that are exactly 18! We'll handle that at the end. .

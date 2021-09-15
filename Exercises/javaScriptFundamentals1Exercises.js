@@ -108,3 +108,10 @@ function calculateWeight(earthWeight, planet) {
     }
     return weight;
 }
+
+/**
+ * Checks the truthiness of an object.
+ * @param {object} value The value to evaluate.
+ * @returns True if the object is "truthy", false otherwise.
+ */
+const  truthyOrFalsy = (value) => value ? true : false;

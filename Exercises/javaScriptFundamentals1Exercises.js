@@ -114,4 +114,78 @@ function calculateWeight(earthWeight, planet) {
  * @param {object} value The value to evaluate.
  * @returns True if the object is "truthy", false otherwise.
  */
-const  truthyOrFalsy = (value) => value ? true : false;
+const truthyOrFalsy = (value) => value ? true : false;
+
+/**
+ * Each person has 1/4 as many imaginary friends as real friends.  This calculates the number of imaginary friends
+ * a person has given the number of real friends they have.
+ * @param {number} friends How many friends this person has.
+ * @returns The number of imaginary friends this person has, rounded up to the nearest integer.
+ */
+const numImaginaryFriends = (friends) => Math.ceil(friends / 4);
+
+/**
+ * Constructs a silly sentence.  Parameters are self explanatory.
+ * @param {string} adjective 
+ * @param {string} verb 
+ * @param {string} noun 
+ * @returns A sentence constructed with the above three strings.
+ */
+const sillySentence = (adjective, verb, noun) => `I am so ${adjective} because I ${verb} coding! Time to write some more awesome ${noun}!`;
+
+/**
+ * Given a person's age, returns how old the person was in a given year. Handles three cases:
+ * 1. The year is in the future.
+ * 2. The year is before the person was born.
+ * 3. The year is between the person's birth year and the current year.
+ * @param {number} age 
+ * @param {number} year 
+ * @returns A string describing the age of the person at the year passed in.
+ */
+function howOld(age, year) {
+    const currentDate = new Date();
+    const currentYear = currentDate.getFullYear();
+    const yearBorn = currentYear - age;
+    if (yearBorn > year) {
+        const diff = yearBorn - year;
+        return `The year ${year} was ${diff} years before you were born`;
+    } else if (year > currentYear) {
+        const newAge = year - yearBorn;
+        return `You will be ${newAge} in the year ${year}`;
+    } else {
+        const oldAge = year - yearBorn;
+        return `You were ${oldAge} in the year ${year}`
+    }
+}
+
+// Start debugging section.  The below code was provided broken and the exercise is to fix it.
+
+const whatRelation = percentSharedDNA => {
+    if (percentSharedDNA === 100) {
+        return 'You are likely identical twins.'
+    }
+    if (percentSharedDNA > 34) {
+        return 'You are likely parent and child or full siblings.'
+    }
+    if (percentSharedDNA > 13) {
+        return 'You are likely grandparent and grandchild, aunt/uncle and niece/nephew, or half siblings.'
+    }
+    if (percentSharedDNA > 5) {
+        return 'You are likely 1st cousins.'
+    }
+    if (percentSharedDNA > 2) {
+        return 'You are likely 2nd cousins.'
+    }
+    if (percentSharedDNA > 0) {
+        return 'You are likely 3rd cousins'
+    }
+    return 'You are likely not related.'
+}
+
+console.log(whatRelation(34))
+// Should print 'You are likely grandparent and grandchild, aunt/uncle and niece/nephew, or half siblings.'
+
+console.log(whatRelation(3))
+// Should print 'You are likely 2nd cousins.'
+
+// End debugging section.

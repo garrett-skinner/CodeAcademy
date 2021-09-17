@@ -189,3 +189,79 @@ console.log(whatRelation(3))
 // Should print 'You are likely 2nd cousins.'
 
 // End debugging section.
+
+/**
+ * Calculates the tip for the given meal given the quality of service and total cost
+ * @param {string} quality The quality of service provided
+ * @param {number} cost    The total cost of the meal.
+ * @returns The amount we should tip.
+ */
+function tipCalculator(quality, cost) {
+    let multiplier;
+    switch (quality) {
+        case 'bad':
+            multiplier = 0.05;
+            break;
+        case 'ok':
+            multiplier = 0.15;
+            break;
+        case 'good':
+            multiplier = 0.2;
+            break;
+        case 'excellent':
+            multiplier = 0.3;
+            break;
+        default:
+            multiplier = 0.18;
+            break;
+    }
+    return cost * multiplier;
+}
+
+/**
+ * Takes an emotion and visualizes it.
+ * @param {string} emotion The emotion to express.
+ * @returns The input emotion depicted with symbols.
+ */
+function toEmoticon(emotion) {
+    switch (emotion) {
+        case 'shrug':
+            return '|_{"}_|';
+        case 'smiley face':
+            return ':)';
+        case 'frowny face':
+            return ':(';
+        case 'winky face':
+            return ';)';
+        case 'heart':
+            return '<3';
+        default:
+            return '|_(* ~ *)_|';
+    }
+}
+
+/**
+ * Honestly, this function doesn't really do much worth documenting.
+ * @param {string} favoriteColor The user's favorite color.
+ * @param {string} shirtColor The color of the user's shirt.
+ * @returns A sentence either validating the user's shirt color choice or color choice in general.
+ */
+const colorMessage = (favoriteColor, shirtColor) => favoriteColor === shirtColor ? 'The shirt is your favorite color!' : 'That is a nice color.';
+
+/**
+ * Checks whether an input integer is even or not.
+ * @param {number} number An integer.
+ * @returns True if the input integer is even. False otherwise.
+ */
+const isEven = (int) => (int % 2) === 0;
+
+/**
+ * Given a number, describes if it has one or two digits if the number is between 0 and 99.  Otherwise, restates the input number.
+ * @param {number} x The input number.  Assumed to be an integer.
+ * @returns A string describing the input number.
+ */
+function numberDigits(x) {
+    if ((x >= 0) && (x < 10)) { return `One digit: ${x}`; }
+    if ((x >= 10) && (x < 100)) { return `Two digits: ${x}`; }
+    return `The number is: ${x}`;
+}

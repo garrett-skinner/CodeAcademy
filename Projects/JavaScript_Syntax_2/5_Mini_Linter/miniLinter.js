@@ -23,15 +23,7 @@ counts.totalWords = storyWords.length;
 // Remove the unnecessary words from the story and save them in a new array.
 let betterWords = [];
 storyWords.forEach(word => {
-    // Assume the word is good by default.  If the word is any of the forbidden words, flip the boolean value and return.  We won't add the forbidden words.
-    let contains = false;
-    unnecessaryWords.forEach(uWord => {
-        if (word === uWord) {
-            contains = true;
-            return
-        }
-    });
-    if (!contains) {
+    if(!unnecessaryWords.includes(word)){
         betterWords.push(word);
     }
 });

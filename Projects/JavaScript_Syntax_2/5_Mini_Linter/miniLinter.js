@@ -56,6 +56,7 @@ betterWords.forEach(word => {
     }
 })
 
+// Print out some statistics of the story.
 function displayCounts() {
     console.log(`The original story contained ${counts.sentenceCount} sentences composed of ${counts.totalWords} words.`);
     for (const word in counts.commonWords) {
@@ -64,4 +65,5 @@ function displayCounts() {
 }
 
 displayCounts();
+// Print the story for the user.
 console.log(`The completed story is:\r\n${betterWords.join(' ')}`);

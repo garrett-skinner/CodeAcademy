@@ -59,3 +59,4 @@ function displayCounts() {
 displayCounts();
 // Print the story for the user.
 console.log(`The completed story is:\r\n${betterWords.join(' ')}`);
+console.log(counts)

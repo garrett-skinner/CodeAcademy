@@ -10,4 +10,4 @@ In this project you'll make a program that measures the strength of any given pa
 * has numerical digits
 * has symbols, like #, ?, !
 
-The program will ask the user to inut a password and, using conditional logic and control flow, rate the password.
+The program will ask the user to input a password and, using conditional logic and control flow, rate the password.
